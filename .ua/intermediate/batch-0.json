@@ -1,0 +1,12 @@
+{
+  "nodes": [
+    { "id": "config:frontend/.oxlintrc.json", "type": "config", "name": ".oxlintrc.json", "filePath": "frontend/.oxlintrc.json", "summary": "Oxlint linter configuration file specifying rules and configuration schema for the frontend application.", "tags": ["oxlint", "lint", "config"], "complexity": "simple" },
+    { "id": "file:frontend/index.html", "type": "file", "name": "index.html", "filePath": "frontend/index.html", "summary": "Single-page application HTML entry point that defines the document title, root container div, and mounts src/main.jsx.", "tags": ["html", "spa", "entry-point"], "complexity": "simple" },
+    { "id": "config:frontend/package.json", "type": "config", "name": "package.json", "filePath": "frontend/package.json", "summary": "Frontend npm package configuration defining React 19 dependencies, build and lint scripts, and Vite dev tooling.", "tags": ["npm", "dependencies", "config", "vite"], "complexity": "simple" }
+  ],
+  "edges": [
+    { "source": "config:frontend/package.json", "target": "file:frontend/src/main.jsx", "type": "configures", "weight": 0.7 },
+    { "source": "file:frontend/index.html", "target": "file:frontend/src/main.jsx", "type": "depends_on", "weight": 0.8 },
+    { "source": "config:frontend/.oxlintrc.json", "target": "file:frontend/src/main.jsx", "type": "configures", "weight": 0.5 }
+  ]
+}

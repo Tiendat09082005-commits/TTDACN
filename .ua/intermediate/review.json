@@ -1,0 +1,28 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'file:backend/routers/attendance.py' has no edges (orphan)",
+    "Node 'file:backend/routers/auth.py' has no edges (orphan)",
+    "Node 'file:backend/routers/students.py' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 47,
+    "totalEdges": 64,
+    "totalLayers": 6,
+    "tourSteps": 10,
+    "nodeTypes": {
+      "config": 3,
+      "file": 22,
+      "document": 1,
+      "class": 8,
+      "function": 9,
+      "endpoint": 3,
+      "table": 1
+    },
+    "edgeTypes": {
+      "configures": 3,
+      "depends_on": 3,
+      "undefined": 58
+    }
+  }
+}

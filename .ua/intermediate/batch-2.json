@@ -1,0 +1,12 @@
+{
+  "nodes": [
+    { "id": "config:frontend/vite.config.js", "type": "config", "name": "vite.config.js", "filePath": "frontend/vite.config.js", "summary": "Vite build configuration with React plugin for the frontend SPA.", "tags": ["vite", "build", "config"], "complexity": "simple" },
+    { "id": "file:generate_model.py", "type": "file", "name": "generate_model.py", "filePath": "generate_model.py", "summary": "Training script that trains the LivenessCNN model on the prepared anti-spoofing dataset and saves weights to liveness_model.pth.", "tags": ["pytorch", "training", "ml", "liveness"], "complexity": "moderate" },
+    { "id": "file:prepare_dataset.py", "type": "file", "name": "prepare_dataset.py", "filePath": "prepare_dataset.py", "summary": "Dataset preparation script that extracts face frames from archive videos and labels them as Real or Fake for liveness model training.", "tags": ["dataset", "opencv", "face-detection", "preprocessing"], "complexity": "moderate" }
+  ],
+  "edges": [
+    { "source": "file:generate_model.py", "target": "file:backend/ai_service/liveness.py", "type": "depends_on", "weight": 0.7 },
+    { "source": "file:prepare_dataset.py", "target": "file:generate_model.py", "type": "depends_on", "weight": 0.8 },
+    { "source": "config:frontend/vite.config.js", "target": "file:frontend/src/main.jsx", "type": "configures", "weight": 0.6 }
+  ]
+}

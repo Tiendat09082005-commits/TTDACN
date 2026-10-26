@@ -1,0 +1,1361 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "FacialRecognition",
+    "languages": [
+      "Python",
+      "JavaScript",
+      "JSX",
+      "CSS",
+      "HTML"
+    ],
+    "frameworks": [
+      "FastAPI",
+      "SQLAlchemy",
+      "PyTorch",
+      "React",
+      "Vite",
+      "face_recognition",
+      "dlib"
+    ],
+    "description": "AI-powered facial recognition attendance system for university classrooms with anti-spoofing liveness detection and a React kiosk frontend.",
+    "analyzedAt": "2026-10-10T11:45:15.519987+00:00",
+    "gitCommitHash": "75e36584318055f83195a5890995c67a9b8739e3"
+  },
+  "nodes": [
+    {
+      "id": "config:frontend/.oxlintrc.json",
+      "type": "config",
+      "name": ".oxlintrc.json",
+      "filePath": "frontend/.oxlintrc.json",
+      "summary": "Oxlint linter configuration file specifying rules and configuration schema for the frontend application.",
+      "tags": [
+        "oxlint",
+        "lint",
+        "config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "frontend/index.html",
+      "summary": "Single-page application HTML entry point that defines the document title, root container div, and mounts src/main.jsx.",
+      "tags": [
+        "html",
+        "spa",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:frontend/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "frontend/package.json",
+      "summary": "Frontend npm package configuration defining React 19 dependencies, build and lint scripts, and Vite dev tooling.",
+      "tags": [
+        "npm",
+        "dependencies",
+        "config",
+        "vite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "language": null,
+      "lines": 16,
+      "complexity": "moderate",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project documentation for the FacialRecognition attendance system.",
+      "tags": [
+        "docs",
+        "readme"
+      ]
+    },
+    {
+      "id": "file:backend/ai_service/__init__.py",
+      "type": "file",
+      "language": "python",
+      "lines": 0,
+      "complexity": "moderate",
+      "name": "ai_service/__init__.py",
+      "filePath": "backend/ai_service/__init__.py",
+      "summary": "Package init for ai_service module (empty).",
+      "tags": [
+        "python",
+        "package"
+      ]
+    },
+    {
+      "id": "file:backend/ai_service/face_engine.py",
+      "type": "file",
+      "language": "python",
+      "lines": 36,
+      "complexity": "moderate",
+      "name": "face_engine.py",
+      "filePath": "backend/ai_service/face_engine.py",
+      "summary": "Face detection and encoding pipeline using face_recognition and OpenCV.",
+      "tags": [
+        "face-recognition",
+        "dlib",
+        "ai",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/ai_service/liveness.py",
+      "type": "file",
+      "language": "python",
+      "lines": 57,
+      "complexity": "moderate",
+      "name": "liveness.py",
+      "filePath": "backend/ai_service/liveness.py",
+      "summary": "PyTorch CNN liveness detection model and inference logic.",
+      "tags": [
+        "pytorch",
+        "cnn",
+        "liveness",
+        "anti-spoofing",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/database.py",
+      "type": "file",
+      "language": "python",
+      "lines": 26,
+      "complexity": "moderate",
+      "name": "database.py",
+      "filePath": "backend/database.py",
+      "summary": "SQLAlchemy engine, session factory, and get_db dependency for SQLite.",
+      "tags": [
+        "sqlalchemy",
+        "sqlite",
+        "database",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/main.py",
+      "type": "file",
+      "language": "python",
+      "lines": 76,
+      "complexity": "moderate",
+      "name": "main.py",
+      "filePath": "backend/main.py",
+      "summary": "FastAPI application entry point with CORS middleware and core API endpoints.",
+      "tags": [
+        "fastapi",
+        "api",
+        "python",
+        "entry-point"
+      ]
+    },
+    {
+      "id": "file:backend/models.py",
+      "type": "file",
+      "language": "python",
+      "lines": 76,
+      "complexity": "moderate",
+      "name": "models.py",
+      "filePath": "backend/models.py",
+      "summary": "SQLAlchemy ORM models: Teacher, Class, Student, FaceEmbedding, AttendanceRecord.",
+      "tags": [
+        "sqlalchemy",
+        "orm",
+        "models",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/routers/attendance.py",
+      "type": "file",
+      "language": "python",
+      "lines": 0,
+      "complexity": "moderate",
+      "name": "routers/attendance.py",
+      "filePath": "backend/routers/attendance.py",
+      "summary": "Attendance router â€” empty placeholder.",
+      "tags": [
+        "fastapi",
+        "router",
+        "attendance",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/routers/auth.py",
+      "type": "file",
+      "language": "python",
+      "lines": 0,
+      "complexity": "moderate",
+      "name": "routers/auth.py",
+      "filePath": "backend/routers/auth.py",
+      "summary": "Auth router â€” empty placeholder.",
+      "tags": [
+        "fastapi",
+        "router",
+        "auth",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/routers/students.py",
+      "type": "file",
+      "language": "python",
+      "lines": 0,
+      "complexity": "moderate",
+      "name": "routers/students.py",
+      "filePath": "backend/routers/students.py",
+      "summary": "Students router â€” empty placeholder.",
+      "tags": [
+        "fastapi",
+        "router",
+        "students",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/schemas.py",
+      "type": "file",
+      "language": "python",
+      "lines": 11,
+      "complexity": "moderate",
+      "name": "schemas.py",
+      "filePath": "backend/schemas.py",
+      "summary": "Pydantic request/response schemas: EnrollRequest, CheckInRequest.",
+      "tags": [
+        "pydantic",
+        "schemas",
+        "validation",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/security.py",
+      "type": "file",
+      "language": "python",
+      "lines": 46,
+      "complexity": "moderate",
+      "name": "security.py",
+      "filePath": "backend/security.py",
+      "summary": "JWT and bcrypt security utilities: password hashing, token creation, and teacher auth dependency.",
+      "tags": [
+        "jwt",
+        "security",
+        "bcrypt",
+        "oauth2",
+        "python"
+      ]
+    },
+    {
+      "id": "file:backend/seed.py",
+      "type": "file",
+      "language": "python",
+      "lines": 44,
+      "complexity": "moderate",
+      "name": "seed.py",
+      "filePath": "backend/seed.py",
+      "summary": "Database seeder â€” inserts test teacher and student records for development.",
+      "tags": [
+        "seed",
+        "dev",
+        "python"
+      ]
+    },
+    {
+      "id": "file:frontend/src/App.jsx",
+      "type": "file",
+      "language": "javascript",
+      "lines": 68,
+      "complexity": "moderate",
+      "name": "App.jsx",
+      "filePath": "frontend/src/App.jsx",
+      "summary": "Root React component; manages 3-state routing: Login -> Dashboard -> Kiosk.",
+      "tags": [
+        "react",
+        "router",
+        "jsx",
+        "auth"
+      ]
+    },
+    {
+      "id": "file:frontend/src/CheckInPage.jsx",
+      "type": "file",
+      "language": "javascript",
+      "lines": null,
+      "complexity": "moderate",
+      "name": "CheckInPage.jsx",
+      "filePath": "frontend/src/CheckInPage.jsx",
+      "summary": "Face enrollment UI component.",
+      "tags": [
+        "react",
+        "camera",
+        "check-in",
+        "jsx"
+      ]
+    },
+    {
+      "id": "file:frontend/src/DashboardPage.jsx",
+      "type": "file",
+      "language": "javascript",
+      "lines": null,
+      "complexity": "moderate",
+      "name": "DashboardPage.jsx",
+      "filePath": "frontend/src/DashboardPage.jsx",
+      "summary": "Teacher dashboard UI component.",
+      "tags": [
+        "react",
+        "dashboard",
+        "jsx",
+        "teacher"
+      ]
+    },
+    {
+      "id": "file:frontend/src/KioskPage.jsx",
+      "type": "file",
+      "language": "javascript",
+      "lines": 671,
+      "complexity": "moderate",
+      "name": "KioskPage.jsx",
+      "filePath": "frontend/src/KioskPage.jsx",
+      "summary": "Main kiosk component: camera capture every 3 s, posts to attendance/checkin, shows check-in overlays and stats.",
+      "tags": [
+        "react",
+        "kiosk",
+        "camera",
+        "face-recognition",
+        "jsx"
+      ]
+    },
+    {
+      "id": "file:frontend/src/LoginPage.jsx",
+      "type": "file",
+      "language": "javascript",
+      "lines": null,
+      "complexity": "moderate",
+      "name": "LoginPage.jsx",
+      "filePath": "frontend/src/LoginPage.jsx",
+      "summary": "Login UI component for teacher authentication.",
+      "tags": [
+        "react",
+        "login",
+        "auth",
+        "jsx"
+      ]
+    },
+    {
+      "id": "file:frontend/src/index.css",
+      "type": "file",
+      "language": "css",
+      "lines": 281,
+      "complexity": "moderate",
+      "name": "index.css",
+      "filePath": "frontend/src/index.css",
+      "summary": "Global stylesheet for the React frontend.",
+      "tags": [
+        "css",
+        "design-system",
+        "styles"
+      ]
+    },
+    {
+      "id": "file:frontend/src/main.jsx",
+      "type": "file",
+      "language": "javascript",
+      "lines": 10,
+      "complexity": "moderate",
+      "name": "main.jsx",
+      "filePath": "frontend/src/main.jsx",
+      "summary": "Vite React entry point â€” mounts <App /> into the DOM.",
+      "tags": [
+        "react",
+        "entry-point",
+        "jsx"
+      ]
+    },
+    {
+      "id": "class:backend/ai_service/liveness.py:LivenessCNN",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "LivenessCNN",
+      "filePath": "backend/ai_service/liveness.py",
+      "summary": "PyTorch CNN model for liveness detection. 3 conv+pool layers, fc1(128*16*16->512), dropout(0.5), fc2(512->2). Input: 128x128 RGB. Output: class 0=Fake, 1=Real.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/models.py:Teacher",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "Teacher",
+      "filePath": "backend/models.py",
+      "summary": "ORM model for a teacher user. Fields: id, name, password_hash. Relations: classes.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/models.py:Class",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "Class",
+      "filePath": "backend/models.py",
+      "summary": "ORM model for a university class/course. Fields: id, name, teacher_id (FK->Teacher). Relations: teacher, students (M2M).",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/models.py:Student",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "Student",
+      "filePath": "backend/models.py",
+      "summary": "ORM model for a student. PK: mssv (student ID). Fields: name. Relations: classes, embeddings.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/models.py:FaceEmbedding",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "FaceEmbedding",
+      "filePath": "backend/models.py",
+      "summary": "ORM model storing a student's 128-dim dlib face encoding as JSON plus a quality score. FK: mssv->Student.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/models.py:AttendanceRecord",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "AttendanceRecord",
+      "filePath": "backend/models.py",
+      "summary": "ORM model for an attendance event. Fields: id, mssv, class_id, attendance_date, timestamp, status, face_distance, liveness_score, spoof_type. Unique: (mssv, class_id, attendance_date).",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/schemas.py:EnrollRequest",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "EnrollRequest",
+      "filePath": "backend/schemas.py",
+      "summary": "Pydantic schema for face enrollment requests. Fields: mssv, image_base64.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "class:backend/schemas.py:CheckInRequest",
+      "type": "class",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "CheckInRequest",
+      "filePath": "backend/schemas.py",
+      "summary": "Pydantic schema for attendance check-in requests. Fields: class_id, image_base64.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/ai_service/face_engine.py:decode_base64",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "decode_base64",
+      "filePath": "backend/ai_service/face_engine.py",
+      "summary": "Strips data URI header, base64-decodes image bytes, converts BGR->RGB numpy array.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/ai_service/face_engine.py:process_face_pipeline",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "process_face_pipeline",
+      "filePath": "backend/ai_service/face_engine.py",
+      "summary": "Full face pipeline: decode base64 -> detect faces -> return (status, face_crop, 128-dim encoding). Status: NO_FACE | MULTIPLE_FACES | SUCCESS.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/ai_service/liveness.py:check_liveness",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "check_liveness",
+      "filePath": "backend/ai_service/liveness.py",
+      "summary": "Runs a face crop through LivenessCNN. Returns (is_real: bool, liveness_score: float).",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/security.py:verify_password",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "verify_password",
+      "filePath": "backend/security.py",
+      "summary": "Bcrypt password verification.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/security.py:get_password_hash",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "get_password_hash",
+      "filePath": "backend/security.py",
+      "summary": "Bcrypt password hashing.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/security.py:create_access_token",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "create_access_token",
+      "filePath": "backend/security.py",
+      "summary": "Creates a JWT access token (HS256, 120-min expiry).",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/security.py:get_current_teacher",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "get_current_teacher",
+      "filePath": "backend/security.py",
+      "summary": "FastAPI dependency: decodes JWT from Authorization header and returns current Teacher ORM object.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/database.py:get_db",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "get_db",
+      "filePath": "backend/database.py",
+      "summary": "FastAPI dependency generator that yields a SQLAlchemy DB session and closes it after use.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "function:backend/main.py:enroll_face",
+      "type": "function",
+      "language": "python",
+      "complexity": "moderate",
+      "name": "enroll_face",
+      "filePath": "backend/main.py",
+      "summary": "Handler for POST /api/students/enroll: runs face pipeline, liveness check, saves FaceEmbedding to DB.",
+      "tags": [
+        "untagged"
+      ]
+    },
+    {
+      "id": "endpoint:/api/auth/login",
+      "type": "endpoint",
+      "method": "POST",
+      "path_pattern": "/api/auth/login",
+      "complexity": "moderate",
+      "name": "POST /api/auth/login",
+      "summary": "Authenticates a teacher and returns a JWT access_token.",
+      "filePath": "backend/main.py",
+      "tags": [
+        "api",
+        "auth",
+        "jwt",
+        "fastapi"
+      ]
+    },
+    {
+      "id": "endpoint:/api/students/enroll",
+      "type": "endpoint",
+      "method": "POST",
+      "path_pattern": "/api/students/enroll",
+      "complexity": "moderate",
+      "name": "POST /api/students/enroll",
+      "summary": "Enrolls a student's face: processes image, runs liveness check, persists 128-dim encoding.",
+      "filePath": "backend/main.py",
+      "tags": [
+        "api",
+        "enrollment",
+        "face",
+        "fastapi"
+      ]
+    },
+    {
+      "id": "endpoint:/api/attendance/checkin",
+      "type": "endpoint",
+      "method": "POST",
+      "path_pattern": "/api/attendance/checkin",
+      "complexity": "moderate",
+      "name": "POST /api/attendance/checkin",
+      "summary": "Records attendance for a class via facial recognition. Called by KioskPage every 3 s.",
+      "filePath": "backend/main.py",
+      "tags": [
+        "api",
+        "attendance",
+        "face-recognition",
+        "fastapi"
+      ]
+    },
+    {
+      "id": "table:backend/attendance.db:attendance",
+      "type": "table",
+      "complexity": "moderate",
+      "name": "attendance.db",
+      "filePath": "backend/attendance.db",
+      "summary": "SQLite database file containing all ORM-managed tables: teachers, classes, students, face_embeddings, attendance_records.",
+      "tags": [
+        "sqlite",
+        "database",
+        "storage"
+      ]
+    },
+    {
+      "id": "config:frontend/vite.config.js",
+      "type": "config",
+      "name": "vite.config.js",
+      "filePath": "frontend/vite.config.js",
+      "summary": "Vite build configuration with React plugin for the frontend SPA.",
+      "tags": [
+        "vite",
+        "build",
+        "config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:generate_model.py",
+      "type": "file",
+      "name": "generate_model.py",
+      "filePath": "generate_model.py",
+      "summary": "Training script that trains the LivenessCNN model on the prepared anti-spoofing dataset and saves weights to liveness_model.pth.",
+      "tags": [
+        "pytorch",
+        "training",
+        "ml",
+        "liveness"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:prepare_dataset.py",
+      "type": "file",
+      "name": "prepare_dataset.py",
+      "filePath": "prepare_dataset.py",
+      "summary": "Dataset preparation script that extracts face frames from archive videos and labels them as Real or Fake for liveness model training.",
+      "tags": [
+        "dataset",
+        "opencv",
+        "face-detection",
+        "preprocessing"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:frontend/package.json",
+      "target": "file:frontend/src/main.jsx",
+      "type": "configures",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:frontend/index.html",
+      "target": "file:frontend/src/main.jsx",
+      "type": "depends_on",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "config:frontend/.oxlintrc.json",
+      "target": "file:frontend/src/main.jsx",
+      "type": "configures",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "file:backend/database.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "file:backend/models.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "file:backend/security.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "file:backend/schemas.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "file:backend/ai_service/face_engine.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "file:backend/ai_service/liveness.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "endpoint:/api/auth/login",
+      "relation": "contains",
+      "label": "defines endpoint",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "endpoint:/api/students/enroll",
+      "relation": "contains",
+      "label": "defines endpoint",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/main.py",
+      "target": "function:backend/main.py:enroll_face",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "endpoint:/api/students/enroll",
+      "target": "function:backend/main.py:enroll_face",
+      "relation": "handled_by",
+      "label": "handled by",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "endpoint:/api/auth/login",
+      "target": "function:backend/security.py:create_access_token",
+      "relation": "calls",
+      "label": "calls",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "endpoint:/api/auth/login",
+      "target": "function:backend/security.py:verify_password",
+      "relation": "calls",
+      "label": "calls",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "function:backend/main.py:enroll_face",
+      "target": "function:backend/ai_service/face_engine.py:process_face_pipeline",
+      "relation": "calls",
+      "label": "calls",
+      "direction": "forward",
+      "type": "calls"
+    },
+    {
+      "source": "function:backend/main.py:enroll_face",
+      "target": "function:backend/ai_service/liveness.py:check_liveness",
+      "relation": "calls",
+      "label": "calls",
+      "direction": "forward",
+      "type": "calls"
+    },
+    {
+      "source": "function:backend/main.py:enroll_face",
+      "target": "class:backend/models.py:FaceEmbedding",
+      "relation": "writes",
+      "label": "writes",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "file:backend/ai_service/face_engine.py",
+      "target": "function:backend/ai_service/face_engine.py:decode_base64",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/ai_service/face_engine.py",
+      "target": "function:backend/ai_service/face_engine.py:process_face_pipeline",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "function:backend/ai_service/face_engine.py:process_face_pipeline",
+      "target": "function:backend/ai_service/face_engine.py:decode_base64",
+      "relation": "calls",
+      "label": "calls",
+      "direction": "forward",
+      "type": "calls"
+    },
+    {
+      "source": "file:backend/ai_service/liveness.py",
+      "target": "class:backend/ai_service/liveness.py:LivenessCNN",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/ai_service/liveness.py",
+      "target": "function:backend/ai_service/liveness.py:check_liveness",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "function:backend/ai_service/liveness.py:check_liveness",
+      "target": "class:backend/ai_service/liveness.py:LivenessCNN",
+      "relation": "uses",
+      "label": "uses model",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "file:backend/security.py",
+      "target": "function:backend/security.py:verify_password",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/security.py",
+      "target": "function:backend/security.py:get_password_hash",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/security.py",
+      "target": "function:backend/security.py:create_access_token",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/security.py",
+      "target": "function:backend/security.py:get_current_teacher",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "function:backend/security.py:get_current_teacher",
+      "target": "class:backend/models.py:Teacher",
+      "relation": "returns",
+      "label": "returns",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "file:backend/database.py",
+      "target": "function:backend/database.py:get_db",
+      "relation": "contains",
+      "label": "defines function",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/database.py",
+      "target": "table:backend/attendance.db:attendance",
+      "relation": "manages",
+      "label": "manages",
+      "direction": "forward",
+      "type": "writes_to"
+    },
+    {
+      "source": "file:backend/models.py",
+      "target": "class:backend/models.py:Teacher",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/models.py",
+      "target": "class:backend/models.py:Class",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/models.py",
+      "target": "class:backend/models.py:Student",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/models.py",
+      "target": "class:backend/models.py:FaceEmbedding",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/models.py",
+      "target": "class:backend/models.py:AttendanceRecord",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "class:backend/models.py:Class",
+      "target": "class:backend/models.py:Teacher",
+      "relation": "foreign_key",
+      "label": "teacher_id FK",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "class:backend/models.py:FaceEmbedding",
+      "target": "class:backend/models.py:Student",
+      "relation": "foreign_key",
+      "label": "mssv FK",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "class:backend/models.py:AttendanceRecord",
+      "target": "class:backend/models.py:Student",
+      "relation": "foreign_key",
+      "label": "mssv FK",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "class:backend/models.py:AttendanceRecord",
+      "target": "class:backend/models.py:Class",
+      "relation": "foreign_key",
+      "label": "class_id FK",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "class:backend/models.py:Student",
+      "target": "class:backend/models.py:Class",
+      "relation": "many_to_many",
+      "label": "enrolled in",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "class:backend/models.py:FaceEmbedding",
+      "target": "table:backend/attendance.db:attendance",
+      "relation": "reads_from",
+      "label": "reads_from",
+      "direction": "forward",
+      "type": "writes_to"
+    },
+    {
+      "source": "class:backend/models.py:AttendanceRecord",
+      "target": "table:backend/attendance.db:attendance",
+      "relation": "writes_to",
+      "label": "writes_to",
+      "direction": "forward",
+      "type": "writes_to"
+    },
+    {
+      "source": "file:backend/schemas.py",
+      "target": "class:backend/schemas.py:EnrollRequest",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/schemas.py",
+      "target": "class:backend/schemas.py:CheckInRequest",
+      "relation": "contains",
+      "label": "defines class",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "endpoint:/api/students/enroll",
+      "target": "class:backend/schemas.py:EnrollRequest",
+      "relation": "accepts",
+      "label": "accepts body",
+      "direction": "forward",
+      "type": "depends_on"
+    },
+    {
+      "source": "endpoint:/api/attendance/checkin",
+      "target": "class:backend/schemas.py:CheckInRequest",
+      "relation": "accepts",
+      "label": "accepts body",
+      "direction": "forward",
+      "type": "depends_on"
+    },
+    {
+      "source": "file:backend/seed.py",
+      "target": "class:backend/models.py:Teacher",
+      "relation": "writes",
+      "label": "seeds",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/seed.py",
+      "target": "class:backend/models.py:Student",
+      "relation": "writes",
+      "label": "seeds",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:backend/seed.py",
+      "target": "file:backend/database.py",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:frontend/src/main.jsx",
+      "target": "file:frontend/src/App.jsx",
+      "relation": "imports",
+      "label": "mounts",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:frontend/src/App.jsx",
+      "target": "file:frontend/src/LoginPage.jsx",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:frontend/src/App.jsx",
+      "target": "file:frontend/src/DashboardPage.jsx",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:frontend/src/App.jsx",
+      "target": "file:frontend/src/KioskPage.jsx",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:frontend/src/App.jsx",
+      "target": "endpoint:/api/auth/login",
+      "relation": "calls",
+      "label": "calls on login",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/KioskPage.jsx",
+      "target": "endpoint:/api/attendance/checkin",
+      "relation": "calls",
+      "label": "POST every 3s",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/CheckInPage.jsx",
+      "target": "endpoint:/api/students/enroll",
+      "relation": "calls",
+      "label": "calls on enroll",
+      "direction": "forward",
+      "type": "contains"
+    },
+    {
+      "source": "file:frontend/src/main.jsx",
+      "target": "file:frontend/src/index.css",
+      "relation": "imports",
+      "label": "imports",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/ai_service/__init__.py",
+      "target": "file:backend/ai_service/face_engine.py",
+      "relation": "packages",
+      "label": "packages",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:backend/ai_service/__init__.py",
+      "target": "file:backend/ai_service/liveness.py",
+      "relation": "packages",
+      "label": "packages",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:backend/main.py",
+      "relation": "documents",
+      "label": "documents",
+      "direction": "forward",
+      "type": "related"
+    },
+    {
+      "source": "file:generate_model.py",
+      "target": "file:backend/ai_service/liveness.py",
+      "type": "depends_on",
+      "weight": 0.7,
+      "direction": "forward"
+    },
+    {
+      "source": "file:prepare_dataset.py",
+      "target": "file:generate_model.py",
+      "type": "depends_on",
+      "weight": 0.8,
+      "direction": "forward"
+    },
+    {
+      "source": "config:frontend/vite.config.js",
+      "target": "file:frontend/src/main.jsx",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:ai-engine",
+      "name": "AI Engine",
+      "description": "Machine learning components: face detection, 128-dim embedding extraction, liveness CNN inference, and model training/dataset pipelines.",
+      "nodeIds": [
+        "file:backend/ai_service/face_engine.py",
+        "file:backend/ai_service/liveness.py",
+        "file:backend/ai_service/__init__.py",
+        "file:generate_model.py",
+        "file:prepare_dataset.py"
+      ]
+    },
+    {
+      "id": "layer:api",
+      "name": "API Layer",
+      "description": "FastAPI application entry point exposing REST endpoints for auth, face enrollment, and attendance check-in.",
+      "nodeIds": [
+        "file:backend/main.py",
+        "endpoint:/api/auth/login",
+        "endpoint:/api/students/enroll",
+        "endpoint:/api/attendance/checkin",
+        "file:backend/routers/attendance.py",
+        "file:backend/routers/auth.py",
+        "file:backend/routers/students.py",
+        "file:backend/schemas.py"
+      ]
+    },
+    {
+      "id": "layer:security",
+      "name": "Security",
+      "description": "JWT-based authentication, bcrypt password hashing, and OAuth2 token validation for teacher accounts.",
+      "nodeIds": [
+        "file:backend/security.py"
+      ]
+    },
+    {
+      "id": "layer:data",
+      "name": "Data Layer",
+      "description": "SQLAlchemy ORM models, SQLite database session management, and seed data for development.",
+      "nodeIds": [
+        "file:backend/database.py",
+        "file:backend/models.py",
+        "file:backend/seed.py",
+        "table:backend/attendance.db:attendance"
+      ]
+    },
+    {
+      "id": "layer:frontend",
+      "name": "Frontend",
+      "description": "React SPA built with Vite: login page, teacher dashboard for class selection, kiosk mode for live facial attendance, and face enrollment UI.",
+      "nodeIds": [
+        "file:frontend/src/main.jsx",
+        "file:frontend/src/App.jsx",
+        "file:frontend/src/LoginPage.jsx",
+        "file:frontend/src/DashboardPage.jsx",
+        "file:frontend/src/KioskPage.jsx",
+        "file:frontend/src/CheckInPage.jsx",
+        "file:frontend/src/index.css",
+        "file:frontend/index.html",
+        "config:frontend/package.json",
+        "config:frontend/.oxlintrc.json",
+        "config:frontend/vite.config.js"
+      ]
+    },
+    {
+      "id": "layer:docs",
+      "name": "Documentation",
+      "description": "Project documentation and metadata.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Start with the README: an AI-powered facial recognition attendance system for university classrooms with anti-spoofing liveness detection.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Database Models",
+      "description": "The data backbone: Teacher, Class, Student, FaceEmbedding (128-dim vectors), and AttendanceRecord with a unique constraint preventing duplicate daily check-ins.",
+      "nodeIds": [
+        "file:backend/models.py",
+        "file:backend/database.py",
+        "table:backend/attendance.db:attendance"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "AI Face Engine",
+      "description": "The face detection pipeline: decode base64 images, locate faces with dlib, and return 128-dimensional face embeddings for identity comparison.",
+      "nodeIds": [
+        "file:backend/ai_service/face_engine.py"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Liveness Detection CNN",
+      "description": "A custom 3-layer CNN (128x128 -> conv/pool x3 -> fc512 -> fc2) trained to distinguish real faces from photos, videos, and printout attacks.",
+      "nodeIds": [
+        "file:backend/ai_service/liveness.py"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "ML Training Pipeline",
+      "description": "Offline tooling: prepare_dataset.py extracts face frames from archive videos (real vs spoofed), generate_model.py trains the LivenessCNN.",
+      "nodeIds": [
+        "file:prepare_dataset.py",
+        "file:generate_model.py"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Security and Authentication",
+      "description": "JWT-based teacher authentication with bcrypt password hashing. Tokens are created on login and validated on every protected endpoint via OAuth2 Bearer.",
+      "nodeIds": [
+        "file:backend/security.py"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "FastAPI Application Entry Point",
+      "description": "The API server: /api/auth/login (teacher login), /api/students/enroll (register face), /api/attendance/checkin (live attendance). Enforces CORS and validates liveness before saving embeddings.",
+      "nodeIds": [
+        "file:backend/main.py",
+        "endpoint:/api/auth/login",
+        "endpoint:/api/students/enroll",
+        "endpoint:/api/attendance/checkin"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Frontend Application Shell",
+      "description": "App.jsx manages a 3-state router (not logged in -> dashboard -> kiosk) using sessionStorage for auth persistence. main.jsx boots React.",
+      "nodeIds": [
+        "file:frontend/src/App.jsx",
+        "file:frontend/src/main.jsx"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Teacher Login and Dashboard",
+      "description": "LoginPage authenticates teachers via the backend and stores the JWT. DashboardPage lists classes and lets the teacher start a kiosk attendance session.",
+      "nodeIds": [
+        "file:frontend/src/LoginPage.jsx",
+        "file:frontend/src/DashboardPage.jsx"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Kiosk Mode - Live Attendance",
+      "description": "KioskPage captures a camera frame every 3 seconds, sends it to /api/attendance/checkin, and shows success or spoof-detection overlays. A processing lock prevents concurrent requests.",
+      "nodeIds": [
+        "file:frontend/src/KioskPage.jsx"
+      ]
+    }
+  ]
+}

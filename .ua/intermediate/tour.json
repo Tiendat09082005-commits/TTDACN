@@ -1,0 +1,90 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "Start with the README: an AI-powered facial recognition attendance system for university classrooms with anti-spoofing liveness detection.",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Database Models",
+    "description": "The data backbone: Teacher, Class, Student, FaceEmbedding (128-dim vectors), and AttendanceRecord with a unique constraint preventing duplicate daily check-ins.",
+    "nodeIds": [
+      "file:backend/models.py",
+      "file:backend/database.py",
+      "table:backend/attendance.db:attendance"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "AI Face Engine",
+    "description": "The face detection pipeline: decode base64 images, locate faces with dlib, and return 128-dimensional face embeddings for identity comparison.",
+    "nodeIds": [
+      "file:backend/ai_service/face_engine.py"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Liveness Detection CNN",
+    "description": "A custom 3-layer CNN (128x128 -> conv/pool x3 -> fc512 -> fc2) trained to distinguish real faces from photos, videos, and printout attacks.",
+    "nodeIds": [
+      "file:backend/ai_service/liveness.py"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "ML Training Pipeline",
+    "description": "Offline tooling: prepare_dataset.py extracts face frames from archive videos (real vs spoofed), generate_model.py trains the LivenessCNN.",
+    "nodeIds": [
+      "file:prepare_dataset.py",
+      "file:generate_model.py"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Security and Authentication",
+    "description": "JWT-based teacher authentication with bcrypt password hashing. Tokens are created on login and validated on every protected endpoint via OAuth2 Bearer.",
+    "nodeIds": [
+      "file:backend/security.py"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "FastAPI Application Entry Point",
+    "description": "The API server: /api/auth/login (teacher login), /api/students/enroll (register face), /api/attendance/checkin (live attendance). Enforces CORS and validates liveness before saving embeddings.",
+    "nodeIds": [
+      "file:backend/main.py",
+      "endpoint:/api/auth/login",
+      "endpoint:/api/students/enroll",
+      "endpoint:/api/attendance/checkin"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Frontend Application Shell",
+    "description": "App.jsx manages a 3-state router (not logged in -> dashboard -> kiosk) using sessionStorage for auth persistence. main.jsx boots React.",
+    "nodeIds": [
+      "file:frontend/src/App.jsx",
+      "file:frontend/src/main.jsx"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "Teacher Login and Dashboard",
+    "description": "LoginPage authenticates teachers via the backend and stores the JWT. DashboardPage lists classes and lets the teacher start a kiosk attendance session.",
+    "nodeIds": [
+      "file:frontend/src/LoginPage.jsx",
+      "file:frontend/src/DashboardPage.jsx"
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Kiosk Mode - Live Attendance",
+    "description": "KioskPage captures a camera frame every 3 seconds, sends it to /api/attendance/checkin, and shows success or spoof-detection overlays. A processing lock prevents concurrent requests.",
+    "nodeIds": [
+      "file:frontend/src/KioskPage.jsx"
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "layer:ai-engine",
+    "name": "AI Engine",
+    "description": "Machine learning components: face detection, 128-dim embedding extraction, liveness CNN inference, and model training/dataset pipelines.",
+    "nodeIds": [
+      "file:backend/ai_service/face_engine.py",
+      "file:backend/ai_service/liveness.py",
+      "file:backend/ai_service/__init__.py",
+      "file:generate_model.py",
+      "file:prepare_dataset.py"
+    ]
+  },
+  {
+    "id": "layer:api",
+    "name": "API Layer",
+    "description": "FastAPI application entry point exposing REST endpoints for auth, face enrollment, and attendance check-in.",
+    "nodeIds": [
+      "file:backend/main.py",
+      "endpoint:/api/auth/login",
+      "endpoint:/api/students/enroll",
+      "endpoint:/api/attendance/checkin",
+      "file:backend/routers/attendance.py",
+      "file:backend/routers/auth.py",
+      "file:backend/routers/students.py",
+      "file:backend/schemas.py"
+    ]
+  },
+  {
+    "id": "layer:security",
+    "name": "Security",
+    "description": "JWT-based authentication, bcrypt password hashing, and OAuth2 token validation for teacher accounts.",
+    "nodeIds": [
+      "file:backend/security.py"
+    ]
+  },
+  {
+    "id": "layer:data",
+    "name": "Data Layer",
+    "description": "SQLAlchemy ORM models, SQLite database session management, and seed data for development.",
+    "nodeIds": [
+      "file:backend/database.py",
+      "file:backend/models.py",
+      "file:backend/seed.py",
+      "table:backend/attendance.db:attendance"
+    ]
+  },
+  {
+    "id": "layer:frontend",
+    "name": "Frontend",
+    "description": "React SPA built with Vite: login page, teacher dashboard for class selection, kiosk mode for live facial attendance, and face enrollment UI.",
+    "nodeIds": [
+      "file:frontend/src/main.jsx",
+      "file:frontend/src/App.jsx",
+      "file:frontend/src/LoginPage.jsx",
+      "file:frontend/src/DashboardPage.jsx",
+      "file:frontend/src/KioskPage.jsx",
+      "file:frontend/src/CheckInPage.jsx",
+      "file:frontend/src/index.css",
+      "file:frontend/index.html",
+      "config:frontend/package.json",
+      "config:frontend/.oxlintrc.json",
+      "config:frontend/vite.config.js"
+    ]
+  },
+  {
+    "id": "layer:docs",
+    "name": "Documentation",
+    "description": "Project documentation and metadata.",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  }
+]

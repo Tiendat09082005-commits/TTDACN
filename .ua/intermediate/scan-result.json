@@ -1,0 +1,218 @@
+{
+  "scriptCompleted": true,
+  "contentDigest": "33f5bcd00411fa0dc88f323ecb3238e2b370d4533d7d66d15e8272fad6cb8f2a",
+  "files": [
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "archive/anti-spoofing.csv",
+      "language": "csv",
+      "sizeLines": 10,
+      "fileCategory": "data"
+    },
+    {
+      "path": "archive/replay/0001ffba3c--628f8595ab45cb7cba7116fd__iPhone 12 PRO__iPhone X.MOV",
+      "language": "mov",
+      "sizeLines": 5829,
+      "fileCategory": "code"
+    },
+    {
+      "path": "archive/replay/0001ffba3c--629066494796d7421dad66b7__iPhone xr __iPhone 6s.MOV",
+      "language": "mov",
+      "sizeLines": 4826,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/ai_service/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/ai_service/face_engine.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/ai_service/liveness.py",
+      "language": "python",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/ai_service/liveness_model.pth",
+      "language": "pth",
+      "sizeLines": 199654,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/attendance.db",
+      "language": "db",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/database.py",
+      "language": "python",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/main.py",
+      "language": "python",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/models.py",
+      "language": "python",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/routers/attendance.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/routers/auth.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/routers/students.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/schemas.py",
+      "language": "python",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/security.py",
+      "language": "python",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/seed.py",
+      "language": "python",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/.oxlintrc.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/index.html",
+      "language": "html",
+      "sizeLines": 13,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "frontend/package.json",
+      "language": "json",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/src/App.jsx",
+      "language": "javascript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/CheckInPage.jsx",
+      "language": "javascript",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/DashboardPage.jsx",
+      "language": "javascript",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/KioskPage.jsx",
+      "language": "javascript",
+      "sizeLines": 670,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/LoginPage.jsx",
+      "language": "javascript",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/index.css",
+      "language": "css",
+      "sizeLines": 281,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "frontend/src/main.jsx",
+      "language": "javascript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "language": "javascript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "generate_model.py",
+      "language": "python",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "prepare_dataset.py",
+      "language": "python",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 31,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "moderate",
+  "failures": [],
+  "stats": {
+    "filesScanned": 31,
+    "byCategory": {
+      "docs": 1,
+      "data": 1,
+      "code": 25,
+      "config": 2,
+      "markup": 2
+    },
+    "byLanguage": {
+      "markdown": 1,
+      "csv": 1,
+      "mov": 2,
+      "python": 14,
+      "pth": 1,
+      "db": 1,
+      "json": 2,
+      "html": 1,
+      "javascript": 7,
+      "css": 1
+    }
+  }
+}
